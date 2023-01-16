@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Children } from "react";
 import ReactDOM  from "react-dom/client";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Headers from "./components/Header";
 import About from "./components/About";
 import Error from "./components/Error";
-import { createBrowserRouter ,RouterProvider  } from "react-router-dom"; 
+import Contact from "./components/Contact"
+import { createBrowserRouter ,RouterProvider ,Outlet, UNSAFE_useScrollRestoration } from "react-router-dom"; 
 
 
 
@@ -13,7 +14,8 @@ const App = () => {
     return (
         <React.Fragment>
             <Headers/>
-            <Body/>
+            <Outlet/>
+            {/*<Body/>*/}
             <Footer/>
         </React.Fragment>
     )
@@ -24,7 +26,21 @@ const appRouter  = createBrowserRouter([
     {
         path : "/",
         element : <App/> ,
-        errorElement: <Error/>
+        errorElement: <Error/>,
+        children: [
+            {
+                path: "/",
+                element: <Body/>
+            },
+            {
+                path: "/about",
+                element: <About/>
+            },
+            {
+                path: "/contact",
+                element: <Contact/>
+            }
+        ]
     },
     {
         path : "/about",
