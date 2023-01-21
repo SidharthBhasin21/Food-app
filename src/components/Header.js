@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import '../components/styles/headerStyles.css'    
 
 const Headers= () =>{
 
@@ -9,7 +9,9 @@ const Headers= () =>{
     return(
 
     <div className="navbar">
-        <h1>Dev's Kitchen  </h1>
+        <Link to = "/" >
+            <img src = "https://rasoicalgary.com/wp-content/uploads/2021/11/rasoi-logo-1.png"/>
+        </Link> 
         <ul className="nav-list">
             <li>
                 <Link to = "/">Home</Link>

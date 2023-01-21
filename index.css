@@ -1,11 +1,6 @@
-.navbar{
-    display:  flex;
-    border: 1px solid black;
-    justify-content: space-between;
-    /* padding: 1rem; */
-}
-.navbar > img{
-    width: 100px;
+
+.navbar > a > img{
+    width: 150px;
     padding: 1rem;
 }
 .nav-list {
@@ -17,7 +12,7 @@
     padding: 1rem;
 }
 
-.body-container{
+.restaurants-card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
