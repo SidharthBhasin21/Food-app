@@ -4,13 +4,9 @@ import RestaurantCard from "./RestaurantCard";
 import { useState , useEffect} from "react";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
+import { filterData } from "./utils/Helper";
 
 
-function filterData(searchText,restaurants){
-    return restaurants.filter((restaurant) =>
-        restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
-        )
-}
 const Body= () =>{
     const [allRestaurants,setAllRestaurants] = useState([])
     const [filteredRestaurants,setFilteredRestaurants] = useState([]);
@@ -19,8 +15,7 @@ const Body= () =>{
     console.log(allRestaurants, filteredRestaurants?.length)
     useEffect(() =>{
         if(filteredRestaurants.length === 0 && allRestaurants.length === 0) {
-            getRestaurants  ();
-
+            getRestaurants();
         }   
 
     },[])
@@ -31,8 +26,8 @@ const Body= () =>{
         );   
         const json = await data.json();
         console.log(json?.data?.cards[0]?.data?.data?.cards);
-        setAllRestaurants(json?.data?.cards[0]?.data?.data?.cards)
-        setFilteredRestaurants(json?.data?.cards[0]?.data?.data?.cards)
+        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards)
+        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards)
     } 
     
     //  if(filteredRestaurants.length == 0) return <h1>Ohh...No Restaurant by that Name</h1>

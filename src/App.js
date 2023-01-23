@@ -10,6 +10,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 
 import { createBrowserRouter ,RouterProvider ,Outlet, UNSAFE_useScrollRestoration } from "react-router-dom"; 
 import Profile from "./components/Profile";
+import ProfileClass from "./components/ProfileClass";
 
 
 
@@ -42,7 +43,13 @@ const appRouter  = createBrowserRouter([
                     path: "profile",
                     element: <Profile/>
 
-                }]
+                },
+                {
+                    path: "profileClass",
+                    element: <ProfileClass/>
+                }
+            
+            ]
             },
             {
                 path: "/contact",
