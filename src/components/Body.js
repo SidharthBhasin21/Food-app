@@ -4,7 +4,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState , useEffect} from "react";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
-import { filterData } from "./utils/Helper";
+import { filterData } from "./utils/helper";
+import {useOnline} from "./utils/useOnline";
 
 
 const Body= () =>{
@@ -12,12 +13,10 @@ const Body= () =>{
     const [filteredRestaurants,setFilteredRestaurants] = useState([]);
     const [searchText,setSearchText] = useState("");
 
-    console.log(allRestaurants, filteredRestaurants?.length)
+    // console.log(allRestaurants, filteredRestaurants?.length)
     useEffect(() =>{
-        if(filteredRestaurants.length === 0 && allRestaurants.length === 0) {
-            getRestaurants();
-        }   
 
+            getRestaurants();  
     },[])
 
     async function getRestaurants(){
@@ -25,13 +24,16 @@ const Body= () =>{
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=32.7266016&lng=74.8570259&page_type=DESKTOP_WEB_LISTING"
         );   
         const json = await data.json();
-        console.log(json?.data?.cards[0]?.data?.data?.cards);
+        console.log(json?.data?.cards[2]?.data?.data?.cards);
         setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards)
         setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards)
     } 
     
     //  if(filteredRestaurants.length == 0) return <h1>Ohh...No Restaurant by that Name</h1>
-
+    const isOnline = useOnline();
+    if(!isOnline){
+        return <h1> Can you please check your internet....u seem offline</h1>
+    }
 
     return allRestaurants?.length === 0 ? <Shimmer/> :( 
         <div className="body-container">
@@ -64,7 +66,7 @@ const Body= () =>{
                                 <RestaurantCard {...restaurant.data} key = {restaurant.data.id} />
                             </Link>
                         )
-                    })
+                     })
                 }
         </div>
     </div>

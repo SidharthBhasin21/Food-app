@@ -1,6 +1,6 @@
 import { IMG_CDN_URL } from "../Constants";
 
-const RestaurantCard = ({name, cuisines, avgRating,cloudinaryImageId}) =>{
+const RestaurantCard = ({name, cuisines, avgRating,cloudinaryImageId,deliveryTime}) =>{
     // const {  } = props
     // console.log(props)
     return(
@@ -8,8 +8,10 @@ const RestaurantCard = ({name, cuisines, avgRating,cloudinaryImageId}) =>{
             <img src={IMG_CDN_URL + cloudinaryImageId} alt="Food-Image"/>
             <h2>{name}</h2>
             <h3> {cuisines.join(", ")}</h3>
-            <h4>{avgRating} stars</h4>
+            <h4>{avgRating} 🌟   {deliveryTime} min   </h4>
         </div>
     )
 }
+
+
 export default RestaurantCard;
