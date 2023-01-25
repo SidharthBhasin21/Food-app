@@ -1,39 +1,8 @@
 
-.navbar > a > img{
-    width: 150px;
-    padding: 1rem;
-}
-.nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;;
-}
-.nav-list > li{
-    padding: 1rem;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-.restaurants-card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.resturant-card{
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 200px;
-    margin: 1rem;
-    text-align: center;
-}
-.resturant-card > img{
-    width: 200px;
-}
-.restaurant-list{
-    display: flex;
-    flex-wrap: wrap;
-}
-.shimmer-card{
-    width: 200px;
-    height: 200px;
-    background: lightgrey;
-    margin: 20px;
-}
+
+

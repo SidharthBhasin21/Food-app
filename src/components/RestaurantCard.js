@@ -5,10 +5,10 @@ const RestaurantCard = ({name, cuisines, avgRating,cloudinaryImageId,deliveryTim
     // console.log(props)
     return(
         <div className="resturant-card">
-            <img src={IMG_CDN_URL + cloudinaryImageId} alt="Food-Image"/>
-            <h2>{name}</h2>
-            <h3> {cuisines.join(", ")}</h3>
-            <h4>{avgRating} 🌟   {deliveryTime} min   </h4>
+            <img src={IMG_CDN_URL + cloudinaryImageId} alt="Food-Image" className="rest-img"/>
+            <h2 className="rest-name">{name}</h2>
+            <h3 className="cuisines"> {cuisines.join(", ")}</h3>
+            <h4><span>{avgRating} * </span>   {deliveryTime} min   </h4>
         </div>
     )
 }

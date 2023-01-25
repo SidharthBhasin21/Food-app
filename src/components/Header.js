@@ -1,34 +1,35 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../components/styles/headerStyles.css";
-
+import logo from "./assets/logo.png" 
 const Headers = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="navbar">
       <Link to="/">
-        <img src="https://rasoicalgary.com/wp-content/uploads/2021/11/rasoi-logo-1.png" />
+        <img src = {logo} className="logo"/>
       </Link>
-      <ul className="nav-list">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>Order now</li>
-        <li>
-          <Link to="/about">About us</Link>
-        </li>
-        <li>
-          <Link to="/contact"> Contact us </Link>
-        </li>
-        <li>
-          <Link to="/groceries"> Groceries🥕 </Link>
-        </li>
-      </ul>
+      <div className="nav-link-container">
+        <ul className="nav-list">
+          <li>
+            <Link to="/" className="nav-link">Home</Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-link">About us</Link>
+          </li>
+          <li>
+            <Link to="/contact" className="nav-link"> Contact us </Link>
+          </li>
+          <li>
+            <Link to="/groceries" className="nav-link"> Groceries </Link>
+          </li>
+        </ul>
+      </div>
       {isLoggedIn ? (
-        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+        <button className="login-button" onClick={() => setIsLoggedIn(false)}>Cart</button>
       ) : (
-        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+        <button className="login-button" onClick={() => setIsLoggedIn(true)}>Empty</button>
       )}
     </div>
   );

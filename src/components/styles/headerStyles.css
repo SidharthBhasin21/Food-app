@@ -1,7 +1,118 @@
 
 .navbar{
+    padding: 1.2rem;
     display:  flex;
-    border: 1px solid black;
     justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center ;
+    border-bottom: .5px solid rgb(227, 227, 227);
+}
 
+.logo{
+    width: 100px;
+    padding-left: 1rem ;
+}
+.nav-link{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.nav-link:hover{
+    margin: 1rem;
+    color: aliceblue;
+    background-color: rgb(234, 97, 97);
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list > li{
+    padding: 1rem;
+}
+.login-button{
+    background-color: #04AA6D;
+    border-radius: 10px;
+    color: white;
+    border: 0px;
+    width: 100px;
+    padding: 1rem;
+    cursor: pointer;
+}
+.login-button:hover {
+    opacity: 0.8;
+  }
+
+.search-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-bar{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 10px;
+    width: 50%;
+    border-right: none;
+}
+.search-btn{
+    margin-top: 1rem;
+    border-left: none;
+    width:100px;
+    background-color: rgb(234, 97, 97);
+}
+.search-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.restaurants-card-container{
+    margin-top: 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.resturant-card{
+    border: 1px solid rgb(200, 199, 199);
+    border-radius: 10px;
+    width: 300px;
+    height: 340px;
+    margin: 1rem;
+    text-align: center;
+}
+.resturant-card:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+.rest-img{
+    width: 290px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.rest-name{
+    font-size: 1.7rem;
+    color: rgb(79, 78, 78);
+}
+.cuisines{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(79, 78, 78);
+
+}
+.resturant-card >h4> span{
+    color: rgb(79, 78, 78);
+
+    background-color: rgba(0, 128, 0, 0.403);
+}
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    width: 200px;
+    height: 200px;
+    background: lightgrey;
+    margin: 20px;
 }
