@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "test": "jest",
-    "build": "build parcel index.html"
+    "build": "parcel build index.html"
   },
   "author": "sidharth bhasin",
   "license": "ISC",
