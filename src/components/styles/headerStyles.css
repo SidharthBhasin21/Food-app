@@ -15,13 +15,14 @@
 .nav-link{
     margin: 1rem;
     padding: 0.5rem;
+    color: rgb(47, 46, 46);
 }
 .nav-link:hover{
     margin: 1rem;
-    color: aliceblue;
-    background-color: rgb(234, 97, 97);
-    padding: 0.5rem;
-    border-radius: 5px;
+    color: rgb(234, 97, 97);
+    /* background-color: rgb(234, 97, 97); */
+    /* padding: 0.5rem; */
+    /* border-radius: 5px; */
 
 }
 .nav-list {
@@ -55,13 +56,17 @@
     margin-top: 1rem;
     padding: 10px;
     width: 50%;
-    border-right: none;
+    /* border-right: none; */
+    border-radius: 10px;
 }
 .search-btn{
     margin-top: 1rem;
-    border-left: none;
+    margin-left: 3px;
+    /* border-left: none; */
     width:100px;
     background-color: rgb(234, 97, 97);
+    border-radius: 10px;
+
 }
 .search-btn:hover{
     opacity: 0.8;
@@ -83,8 +88,8 @@
     text-align: center;
 }
 .resturant-card:hover{
-    transition: 0.5s;
-    transform: scale(1.2);
+    transition: 0.3s ease-out;
+    transform: scale(1.05);
 }
 .rest-img{
     width: 290px;
@@ -101,10 +106,22 @@
     color: rgb(79, 78, 78);
 
 }
-.resturant-card >h4> span{
-    color: rgb(79, 78, 78);
-
-    background-color: rgba(0, 128, 0, 0.403);
+.rest-info-container{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8rem;
+    color: dimgray;
+}
+.rating{
+    color: rgb(255, 255, 255);
+    background-color: rgb(4, 176, 4);
+    margin: 5px;
+    padding: 2px;
+}
+.costfortwo{
+    /* font-size: rem; */
 }
 .restaurant-list{
     display: flex;

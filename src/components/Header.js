@@ -27,9 +27,9 @@ const Headers = () => {
         </ul>
       </div>
       {isLoggedIn ? (
-        <button className="login-button" onClick={() => setIsLoggedIn(false)}>Cart</button>
+        <button className="login-button" onClick={() => setIsLoggedIn(false)}>Empty</button>
       ) : (
-        <button className="login-button" onClick={() => setIsLoggedIn(true)}>Empty</button>
+        <button className="login-button" onClick={() => setIsLoggedIn(true)}>Cart</button>
       )}
     </div>
   );

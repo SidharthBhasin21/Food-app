@@ -5,7 +5,8 @@
   "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
-    "test": "jest"
+    "test": "jest",
+    "build": "build parcel "
   },
   "author": "sidharth bhasin",
   "license": "ISC",
