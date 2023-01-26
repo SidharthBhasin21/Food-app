@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "test": "jest",
-    "build": "build parcel "
+    "build": "build parcel index.html"
   },
   "author": "sidharth bhasin",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "react-router-dom": "^6.6.2"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
     "process": "^0.11.10"
   }
 }
