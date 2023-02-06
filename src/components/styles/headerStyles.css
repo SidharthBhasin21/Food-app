@@ -34,12 +34,12 @@
     padding: 1rem;
 }
 .login-button{
-    background-color: #04AA6D;
+    background-color: #f2c3c3;
     border-radius: 10px;
-    color: white;
+    color: rgb(80, 80, 80);
     border: 0px;
-    width: 100px;
-    padding: 1rem;
+    /* width: 60px; */
+    padding: 0.5rem;
     cursor: pointer;
 }
 .login-button:hover {
@@ -127,9 +127,34 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.menu-list {
+    margin-top: 5px;
+}
+.menu-card .add-button {
+    background: rgb(145, 238, 145);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+.add-button:hover{
+    opacity: 0.8;
+}
+
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 .shimmer-card{
     width: 200px;
     height: 200px;
     background: lightgrey;
     margin: 20px;
+}
+
+.groceries-container{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 15px 10px;
 }

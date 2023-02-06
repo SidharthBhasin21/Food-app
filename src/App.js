@@ -7,26 +7,25 @@ import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-  UNSAFE_useScrollRestoration,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Profile from "./components/Profile";
 import ProfileClass from "./components/ProfileClass";
+import { Provider } from "react-redux";
+import store from "./components/utils/store";
+import Cart from "./components/Cart";
 
 const Groceries = lazy(() => import("./components/Groceries"));
 
 const App = () => {
   return (
-    <React.Fragment>
-      <Headers />
-      <Outlet />
-      {/*<Body/>*/}
-      <Footer />
-    </React.Fragment>
+    <Provider store={store}>
+      <React.Fragment>
+        <Headers />
+        <Outlet />
+        {/*<Body/>*/}
+        <Footer />
+      </React.Fragment>
+    </Provider>
   );
 };
 
@@ -69,6 +68,10 @@ const appRouter = createBrowserRouter([
             <Groceries />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

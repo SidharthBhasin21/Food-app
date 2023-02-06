@@ -1,12 +1,11 @@
 import { IMG_CDN_URL } from "../Constants";
 
-const RestaurantCard = ({
+const FoodItem = ({
   name,
-  cuisines,
-  avgRating,
+  category,
+  description,
+  price,
   cloudinaryImageId,
-  deliveryTime,
-  costForTwoString,
 }) => {
   // const {  } = props
   // console.log(props)
@@ -18,14 +17,13 @@ const RestaurantCard = ({
         className="rest-img"
       />
       <h2 className="rest-name">{name}</h2>
-      <h3 className="cuisines"> {cuisines.join(", ")}</h3>
+      <h3 className="cuisines"> {description}</h3>
       <div className="rest-info-container">
-        <span className="rating">★ {avgRating} </span>
-        <span className="deliveryTime"> {deliveryTime} min</span>
-        <span className="costfortwo">{costForTwoString} </span>
+        <span className="deliveryTime"> {category} </span>
+        <span className="costfortwo">{price / 100} </span>
       </div>
     </div>
   );
 };
 
-export default RestaurantCard;
+export default FoodItem;
